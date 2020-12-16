@@ -59,7 +59,7 @@
 header {
   border-bottom: 1px solid $gray-200;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 1rem;
   position: relative;
 
   .navbar {
@@ -203,8 +203,8 @@ section {
 
 .testimonial-hero,
 .testimonial-hero img {
-  width: 365px;
-  height: 500px;
+  height: 400px;
+  margin-bottom: 3rem;
 }
 
 footer {
@@ -242,3 +242,52 @@ footer {
 main {
   p { color: $gray-400; font-weight: 300;}
 }
+
+.hero-title {
+  font-size: 2rem;
+}
+
+.hero-desc {
+ line-height: 170%;
+}
+
+.hero-banner {
+  padding: 3rem;
+  height: 240px;
+}
+// @media (min-width: 576px) {
+//   .hero-title {
+//     font-size: 2.5rem;
+//   }
+// }
+
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 3.125rem;
+  }
+  .hero-content {
+    padding-right: 3rem;
+  }
+  .hero-title {
+    font-size: 2.625rem;
+  }
+  .hero-desc {
+    max-width: 75%;
+  }
+  .hero-item {
+    margin-top: 15px;
+    margin-right: 35px;
+  }
+  .hero-banner {
+      width: 520px;
+      height: 410px;
+  }
+  .testimonial-hero,   
+.testimonial-hero img {
+  width: 365px;
+  height: 500px;
+}
+}
+
+// @media (min-width: 992px) {
+// }

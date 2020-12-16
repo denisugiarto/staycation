@@ -16,17 +16,14 @@ export default function Hero(props) {
 
   return (
     <Fade bottom>
-      <section className="container pt-4 mt-5">
-        <div className="row align-items-center">
-          <div className="col-auto pr-5" style={{ width: 530 }}>
-            <h1 className="font-weight-bold line-height-1 mb-3">
+      <section className="container">
+        <div className="row">
+          <div className="hero-content col-lg-6 col-12">
+            <h1 className="hero-title font-weight-bold line-height-1 mb-3">
               Forget Busy Work, <br />
               Start Next Vacation
             </h1>
-            <p
-              className="mb-4 font-weight-light text-gray-500 w-75"
-              style={{ lineHeight: "170%" }}
-            >
+            <p className="hero-desc mb-4 font-weight-light text-gray-500">
               We provide what you need to enjoy your holiday with family. Time
               to make another memorable moments.
             </p>
@@ -40,8 +37,8 @@ export default function Hero(props) {
               Show Me Now
             </Button>
 
-            <div className="row" style={{ marginTop: "80px" }}>
-              <div className="col-auto" style={{ marginRight: 35 }}>
+            <div className="row pt-5">
+              <div className="hero-item col col-lg-3">
                 <img
                   width="36"
                   height="36"
@@ -56,7 +53,7 @@ export default function Hero(props) {
                 </h6>
               </div>
 
-              <div className="col-auto" style={{ marginRight: 35 }}>
+              <div className="hero-item col col-lg-3">
                 <img
                   width="36"
                   height="36"
@@ -71,7 +68,7 @@ export default function Hero(props) {
                 </h6>
               </div>
 
-              <div className="col-auto">
+              <div className="hero-item col col-lg-3">
                 <img
                   width="36"
                   height="36"
@@ -88,8 +85,7 @@ export default function Hero(props) {
             </div>
           </div>
 
-          <div className="col-6 pl-5">
-            <div style={{ width: 520, height: 410 }}>
+          <div className="hero-banner col-lg-5 col-10 pt-5 pl-5">
               <img
                 src={ImageHero}
                 alt="Room with couches"
@@ -102,7 +98,6 @@ export default function Hero(props) {
                 className="img-fluid position-absolute"
                 style={{ margin: "0 -15px -15px 0" }}
               />
-            </div>
           </div>
         </div>
       </section>

@@ -15,8 +15,9 @@ class LandingPage extends Component {
     this.refMostPicked = React.createRef();
   }
 
+  
   componentDidMount() {
-    window.title = "Staycation | Home";
+    document.title = "Staycation | Home";
     window.scrollTo(0, 0);
 
     if (!this.props.page.landingPage)

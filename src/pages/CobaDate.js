@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+import Header from "parts/Header";
 import { InputDate } from "elements/Form";
 export default class Coba extends Component {
   state = {
@@ -15,21 +17,24 @@ export default class Coba extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div
-          className="row align-items-center justify-content-center"
-          style={{ height: "100vh" }}
-        >
-          <div className="col-auto">
-            <InputDate
-              max={30}
-              onChange={this.handleChange}
-              name="value"
-              value={this.state.value}
-            />
+      <>
+        <Header {...this.props} />
+        <div className="container">
+          <div
+            className="row align-items-center justify-content-center"
+            style={{ height: "100vh" }}
+          >
+            <div className="col-auto">
+              <InputDate
+                max={30}
+                onChange={this.handleChange}
+                name="value"
+                value={this.state.value}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }
