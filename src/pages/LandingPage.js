@@ -15,16 +15,12 @@ class LandingPage extends Component {
     this.refMostPicked = React.createRef();
   }
 
-  
   componentDidMount() {
     document.title = "Staycation | Home";
     window.scrollTo(0, 0);
 
     if (!this.props.page.landingPage)
-      this.props.fetchPage(
-        `/landing-page`,
-        "landingPage"
-      );
+      this.props.fetchPage(`/landing-page`, "landingPage");
   }
 
   render() {
@@ -34,10 +30,18 @@ class LandingPage extends Component {
     return (
       <>
         <Header {...this.props} />
-        <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero} />
-        <MostPicked refMostPicked={this.refMostPicked} data={page.landingPage.mostPicked} />
-        <Categories data={page.landingPage.category} />
-        <Testimony data={page.landingPage.testimonial} />
+        <main>
+          <Hero
+            refMostPicked={this.refMostPicked}
+            data={page.landingPage.hero}
+          />
+          <MostPicked
+            refMostPicked={this.refMostPicked}
+            data={page.landingPage.mostPicked}
+          />
+          <Categories data={page.landingPage.category} />
+          <Testimony data={page.landingPage.testimonial} />
+        </main>
         <Footer />
       </>
     );
@@ -49,4 +53,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { fetchPage })(LandingPage);
- 

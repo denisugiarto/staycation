@@ -7,15 +7,16 @@ export default function MostPicked(props) {
     <section className="container" ref={props.refMostPicked}>
       <Fade bottom>
         <h4 className="mb-3">Most Picked</h4>
-        <div className="container-grid">
-          {props.data.map((item, index) => {
+        <div className="row row-cols-lg-3 row-cols-1">
+          {props.data.map((item) => {
             return (
               <div
-                key={`mostpicked-${index}`}
-                className={`item column-4${index === 0 ? " row-2" : " row-1"}`}
+                key={`mostpicked-${item}`}
+                className="col"
               >
-                <Fade bottom delay={500 * index}>
-                  <div className="card card-featured">
+                <Fade bottom delay={500}>
+                  <div className="card">
+                    <figure>
                     <div className="tag">
                       ${item.price}
                       <span className="font-weight-light">
@@ -23,7 +24,6 @@ export default function MostPicked(props) {
                         per {item.unit}
                       </span>
                     </div>
-                    <figure className="img-wrapper">
                       <img
                         src={
                           item.imageId[0]
@@ -31,21 +31,22 @@ export default function MostPicked(props) {
                             : ""
                         }
                         alt={item.title}
-                        className="img-cover"
+                        className="img-fluid"
+                        style={{width:"350px", height:"350px", objectFit: "cover", borderRadius:"1em"}}
                       />
-                    </figure>
                     <div className="meta-wrapper">
                       <Button
                         type="link"
                         className="stretched-link d-block text-white"
                         href={`/properties/${item._id}`}
-                      >
+                        >
                         <h5>{item.title}</h5>
                       </Button>
                       <span>
                         {item.city}, {item.country}
                       </span>
                     </div>
+                        </figure>
                   </div>
                 </Fade>
               </div>
