@@ -16,9 +16,9 @@ export default function Hero(props) {
 
   return (
     <Fade bottom>
-      <section className="container mb-0">
-        <div className="d-flex flex-column flex-lg-row mb-lg-5">
-          <div className="hero-content col-lg-6 col">
+      <section className="container-fluid container-lg container-sm">
+        <div className="row row-cols-1 row-cols-lg-2 mb-lg-5">
+          <div className="col">
             <h1 className="hero-title font-weight-bold line-height-1 mb-3">
               Forget Busy Work, <br />
               Start Next Vacation
@@ -85,19 +85,18 @@ export default function Hero(props) {
             </div>
           </div>
 
-          <div className="col-lg-6 col">
-            <div className="position-relative h-100 m-5">
+          <div className="col">
+            <div className="position-relative">
               <img
                 src={ImageHero}
                 alt="Room with couches"
-                className="img-fluid position-absolute"
-                style={{ margin: "-30px 0 0 -30px", zIndex: 1 }}
+                className="img-fluid"
               />
               <img
                 src={ImageHero_}
                 alt="Room with couches"
-                className="img-fluid"
-                style={{ margin: "0 -15px -15px 0" }}
+                className="img-fluid position-absolute"
+                style={{ margin: "5% 0 0 -95%",  zIndex: "-1" }}
               />              
             </div>
           </div>
