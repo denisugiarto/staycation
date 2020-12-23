@@ -8,15 +8,14 @@ export default function MostPicked(props) {
       <Fade bottom>
         <h4 className="mb-3">Most Picked</h4>
         <div className="row row-cols-lg-3 row-cols-1">
-          {props.data.map((item) => {
+          {props.data.map((item, index) => {
             return (
-              <div
-                key={`mostpicked-${item}`}
-                className="col"
-              >
+              <div className="col mb-3 mb-lg-0" style={{ minHeight: "300px" }}>
                 <Fade bottom delay={500}>
-                  <div className="card">
-                    <figure>
+                  <div
+                    className="card card-featured"
+                    key={`mostpicked-${index}`}
+                  >
                     <div className="tag">
                       ${item.price}
                       <span className="font-weight-light">
@@ -24,6 +23,7 @@ export default function MostPicked(props) {
                         per {item.unit}
                       </span>
                     </div>
+                    <figure className="img-wrapper">
                       <img
                         src={
                           item.imageId[0]
@@ -31,22 +31,21 @@ export default function MostPicked(props) {
                             : ""
                         }
                         alt={item.title}
-                        className="img-fluid"
-                        style={{width:"350px", height:"350px", objectFit: "cover", borderRadius:"1em"}}
+                        className="img-cover"
                       />
+                    </figure>
                     <div className="meta-wrapper">
                       <Button
                         type="link"
                         className="stretched-link d-block text-white"
                         href={`/properties/${item._id}`}
-                        >
+                      >
                         <h5>{item.title}</h5>
                       </Button>
                       <span>
                         {item.city}, {item.country}
                       </span>
                     </div>
-                        </figure>
                   </div>
                 </Fade>
               </div>
