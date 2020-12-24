@@ -82,7 +82,7 @@ class BookingForm extends Component {
     const { itemDetails } = this.props;
 
     return (
-      <div className="card bordered" style={{ padding: `60px 80px` }}>
+      <div className="card ">
         <h4 className="mb-3">Start Booking</h4>
         <h5 className="h2 text-teal mb-4">
           ${itemDetails.price}{" "}
