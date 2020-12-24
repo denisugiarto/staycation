@@ -10,11 +10,11 @@ export default function Activities({ data }) {
     <section className="container">
       <Fade bottom>
         <h4 className="mb-3 font-weight-medium">Activities</h4>
-        <div className="container-grid">
+        <div className="row row-cols-lg-4 row-cols-1">
           {data.map((item, index2) => {
             return (
               <div
-                className="item column-3 row-1"
+                className="col mb-3 mb-lg-0"
                 key={`activity-item-${index2}`}
               >
                 <Fade bottom delay={300 * index2}>
@@ -25,7 +25,7 @@ export default function Activities({ data }) {
                         <span className="font-weight-light">Choice</span>
                       </div>
                     )}
-                    <figure className="img-wrapper" style={{ height: 180 }}>
+                    <figure className="img-wrapper" style={{ height: 250 }}>
                       <img
                         src={
                           item.imageUrl
