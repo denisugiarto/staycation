@@ -40,11 +40,11 @@ class DetailsPage extends Component {
         <PageDetailTitle breadcrumb={breadcrumb} data={page[match.params.id]} />
         <FeaturedImage data={page[match.params.id].imageId} />
         <section className="container">
-          <div className="row">
-            <div className="col-12 col-lg-7 pr-5">
+          <div className="row row-cols-lg-2 row-cols-1">
+            <div className="col-lg-8 mb-3 mb-lg-0">
               <PageDetailDescription data={page[match.params.id]} />
             </div>
-            <div className="col-12 col-lg-5">
+            <div className="col-lg-4 mb-3 mb-lg-0">
               <Fade bottom>
                 <BookingForm
                   itemDetails={page[match.params.id]}
