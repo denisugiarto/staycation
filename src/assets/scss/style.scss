@@ -139,7 +139,12 @@ section {
   }
 
   .meta-wrapper {
-    margin-top: 1rem;
+    background-color: rgb(244, 246, 246);
+    margin-top: -1rem;
+    padding: 1.5rem;
+    padding-bottom: 0.5rem;
+    z-index: -1;
+    border-radius: 0.9375rem;
     h5 {
       font-size: 1.125rem;
       margin-bottom: 2px;
