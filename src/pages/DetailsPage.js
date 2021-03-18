@@ -40,8 +40,8 @@ class DetailsPage extends Component {
         <PageDetailTitle breadcrumb={breadcrumb} data={page[match.params.id]} />
         <FeaturedImage data={page[match.params.id].imageId} />
         <section className="container" style={{position: "relative", zIndex:"2"}}>
-            <div className="col-lg-8 mb-3 mb-lg-0">
           <div className="row row-cols-lg-2 row-cols-1">
+            <div className="col-lg-8 mb-3 mb-lg-0">
               <PageDetailDescription data={page[match.params.id]} />
             </div>
             <div className="col-lg-4 mb-3 mb-lg-0">
