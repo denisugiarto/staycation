@@ -6,9 +6,9 @@ import { ToastContainer } from "react-toastify";
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
 import Checkout from "pages/Checkout";
-import CobaNumber from "pages/CobaNumber";
-import CobaDate from "pages/CobaDate";
-import CobaBreadcrumb from "pages/CobaBreadcrumb";
+// import CobaNumber from "pages/CobaNumber";
+// import CobaDate from "pages/CobaDate";
+// import CobaBreadcrumb from "pages/CobaBreadcrumb";
 import NotFound from "pages/404";
 
 import "jquery/dist/jquery.slim.min.js";
@@ -27,9 +27,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage}></Route>
           <Route exact path="/properties/:id" component={DetailsPage}></Route>
-          <Route path="/browse-by" component={CobaDate}></Route>
+          {/* <Route path="/browse-by" component={CobaDate}></Route>
           <Route path="/stories" component={CobaNumber}></Route>
-          <Route path="/agents" component={CobaBreadcrumb}></Route>
+          <Route path="/agents" component={CobaBreadcrumb}></Route> */}
           <Route path="/checkout" component={Checkout}></Route>
           <Route path="/*" component={NotFound}></Route>
         </Switch>
